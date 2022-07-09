@@ -47,32 +47,32 @@ helps = "/spill - spill dulu\n/drink - minum dulu\n/donasi - donasi ke owner bot
 
            
 @bot.on_message(filters.command("start") & filters.private & filters.group)
-async def start(bot, m):
-    await m.reply(start)
+async def start(client, message):
+    await message.reply(start)
     
 @bot.on_message(filters.command("help") & filters.private & filters.group)
-async def helps(bot, m):
-    await m.reply(helps)
+async def helps(client, message):
+    await message.reply(helps)
 
 @bot.on_message(filters.command("spill") & filters.group, group=3)
-async def spill(bot, m):
-    await m.reply(choice(spill))
+async def spill(client, message):
+    await message.reply(choice(spill))
     
-@bot.on_message(filters.command("drink") & filters.group, group=3)
-async def drink(bot, m):
-    await m.reply_photo(choice(drink))
+@bot.on_message(filters.command("drink") & filters.group)
+async def drink(client, message):
+    await message.reply_photo(choice(drink))
 
-@bot.on_message(filters.command("donasi") & filters.group, group=3)
-async def donasi(bot, m):
-    await m.reply(donasi)
+@bot.on_message(filters.command("donasi") & filters.group)
+async def donasi(client, message):
+    await message.reply(donasi)
     
-@bot.on_message(filters.command("request") & filters.group & filters.private)
-async def request(bot, m):
+@bot.on_message(filters.command("request"))
+async def request(client, message):
     if len(m.command) < 2:
-         return await m.reply("contoh = `/request spill photo mantan kamu`")
+         return await message.reply("contoh = `/request spill photo mantan kamu`")
     mmk = m.command[1:]
     kontol = " ".join(mmk)
     await bot.copy(LOG_CHAT, message.chat.id, kontol)
-    await m.reply("Terimakasih telah berkontribusi untuk kami")
+    await message.reply("Terimakasih telah berkontribusi untuk kami")
 
 bot.run()
