@@ -30,31 +30,23 @@ bot = Client("kontolbot",
             
 print("Bot sudah siap di gunakan")
  
-# atart text
-start = f"Selamat bermain dan selamat ter spill!\n\n Jangan lupa subs @{CHANNEL} dan contact @{OWNER} untuk info lainnya.\n\nNote : khusus RL bukan RP"
-
 # spill text
 spill = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/spill.json")
 
 # drink
 drink = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/drink.json")
 
-# donasi text
-donasi = f"Bagi yang punya duit penuh, atau berlebih bisa kali di transfer ke @{OWNER}"
-
-# help text
-helps = "/spill - spill dulu\n/drink - minum dulu\n/donasi - donasi ke owner bot\n/request - request spill bikinan mu"
 
            
 @bot.on_message(filters.command("start") & filters.private & filters.group)
 async def start(client, message):
-    await message.reply(start)
+    await message.reply(f"Selamat bermain dan selamat ter spill!\n\n Jangan lupa subs @{CHANNEL} dan contact @{OWNER} untuk info lainnya.\n\nNote : khusus RL bukan RP")
     
 @bot.on_message(filters.command("help") & filters.private & filters.group)
 async def helps(client, message):
-    await message.reply(helps)
+    await message.reply("/spill - spill dulu\n/drink - minum dulu\n/donasi - donasi ke owner bot\n/request - request spill bikinan mu")
 
-@bot.on_message(filters.command("spill") & filters.group, group=3)
+@bot.on_message(filters.command("spill") & filters.group)
 async def spill(client, message):
     await message.reply(choice(spill))
     
@@ -62,9 +54,9 @@ async def spill(client, message):
 async def drink(client, message):
     await message.reply_photo(choice(drink))
 
-@bot.on_message(filters.command("donasi") & filters.group)
+@bot.on_message(filters.command("donasi") & filters.private)
 async def donasi(client, message):
-    await message.reply(donasi)
+    await message.reply(f"Bagi yang punya duit penuh, atau berlebih bisa kali di transfer ke @{OWNER}")
     
 @bot.on_message(filters.command("request"))
 async def request(client, message):
