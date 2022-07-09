@@ -31,7 +31,6 @@ bot = Client("kontolbot",
             bot_token=BOT_TOKEN)
             
 print("Bot sudah siap di gunakan")
-bot.send_message(LOG_CHAT, 'BOT TELAH AKTIF')
 # spill text
 spill = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/spill.json").json()
 
