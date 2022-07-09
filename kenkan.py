@@ -23,10 +23,12 @@ CHANNEL = os.environ.get("CHANNEL")
 OWNER = os.environ.get("OWNER")
 LOG_CHAT = os.environ.get("LOG_CHAT")
 
-bot = Client("pornhub_bot",
+bot = Client("kontolbot",
             api_id=6,
             api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e",
             bot_token=BOT_TOKEN)
+            
+bot.start()
  
 # atart text
 start = f"Selamat bermain dan selamat ter spill!\n\n Jangan lupa subs @{CHANNEL} dan contact @{OWNER} untuk info lainnya.\n\nNote : khusus RL bukan RP"
@@ -72,14 +74,3 @@ async def request(bot, m):
     kontol = " ".join(mmk)
     await bot.copy(LOG_CHAT, message.chat.id, kontol)
     await m.reply("Terimakasih telah berkontribusi untuk kami")
-    
-    
-bot.start()
-try:
-   print("BOT TELAH AKTIF DAN SIAP DI GUNAKAN")
-   bot.send_messaage(LOG_CHAT, "BOT TELAH AKTIF DAN SIAP DI GUNAKAN")
-   if not str(LOG_CHAT).startswith("-100"):
-       print("Id log anda salah")
-       sys.exit()
-except:
-    pass
