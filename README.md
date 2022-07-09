@@ -40,7 +40,7 @@ ___
 ## Group dan channel
 - [@musikkugroup](https://t.me/musikkugroup)
 - [@musikkuchannel](https://t.me/musikkuchannel)
-- [@PeimeSupportGroup](https://t.me/PrimeSupportGroup)
+- [@PrimeSupportGroup](https://t.me/PrimeSupportGroup)
 - [@PrimeSupportChannel](https://t.me/PrimeSupportChannel)
 
 **KALAU CLONE ATAU FORK JANGAN HAPUS CREDIT YA JANCOK**
