@@ -34,10 +34,10 @@ print("Bot sudah siap di gunakan")
 start = f"Selamat bermain dan selamat ter spill!\n\n Jangan lupa subs @{CHANNEL} dan contact @{OWNER} untuk info lainnya.\n\nNote : khusus RL bukan RP"
 
 # spill text
-spill = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/spill.json").json()
+spill = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/spill.json")
 
 # drink
-drink = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/drink.json").json()
+drink = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/drink.json")
 
 # donasi text
 donasi = f"Bagi yang punya duit penuh, atau berlebih bisa kali di transfer ke @{OWNER}"
