@@ -28,7 +28,7 @@ bot = Client("kontolbot",
             api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e",
             bot_token=BOT_TOKEN)
             
-bot.start()
+print("Bot sudah siap di gunakan")
  
 # atart text
 start = f"Selamat bermain dan selamat ter spill!\n\n Jangan lupa subs @{CHANNEL} dan contact @{OWNER} untuk info lainnya.\n\nNote : khusus RL bukan RP"
@@ -74,3 +74,5 @@ async def request(bot, m):
     kontol = " ".join(mmk)
     await bot.copy(LOG_CHAT, message.chat.id, kontol)
     await m.reply("Terimakasih telah berkontribusi untuk kami")
+
+bot.run()
