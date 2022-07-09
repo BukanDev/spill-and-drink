@@ -98,7 +98,7 @@ async def help_message(client: Client, message: Message):
 
 @bot.on_message(filters.command("spill"))
 async def spill(client: Client, message: Message):
-    await message.reply_text(choice(spill))
+    await message.reply(choice(spill))
     
 @bot.on_message(filters.command("drink"))
 async def drink(client: Client, message: Message):
