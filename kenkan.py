@@ -41,23 +41,23 @@ drink = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/b
 
 
            
-@bot.on_message(filters.command("start") & ~filters.private)
-async def start(client: Client, message: Message):
+@bot.on_message(filters.command("start"))
+async def start_message(client: Client, message: Message):
     await message.reply(f"Selamat bermain dan selamat ter spill!\n\n Jangan lupa subs @{CHANNEL} dan contact @{OWNER} untuk info lainnya.\n\nNote : khusus RL bukan RP")
     
-@bot.on_message(filters.command("help") & ~filters.private & ~filters.group)
-async def helps(client: Client, message: Message):
+@bot.on_message(filters.command("help"))
+async def help_message(client: Client, message: Message):
     await message.reply("/spill - spill dulu\n/drink - minum dulu\n/donasi - donasi ke owner bot\n/request - request spill bikinan mu")
 
-@bot.on_message(filters.command("spill") & ~filters.group)
+@bot.on_message(filters.command("spill"))
 async def spill(client: Client, message: Message):
     await message.reply(choice(spill))
     
-@bot.on_message(filters.command("drink") & ~filters.group)
+@bot.on_message(filters.command("drink"))
 async def drink(client: Client, message: Message):
     await message.reply_photo(choice(drink))
 
-@bot.on_message(filters.command("donasi") & ~filters.private)
+@bot.on_message(filters.command("donasi"))
 async def donasi(client: Client, message: Message):
     await message.reply(f"Bagi yang punya duit penuh, atau berlebih bisa kali di transfer ke @{OWNER}")
     
@@ -67,7 +67,7 @@ async def request(client: Client, message: Message):
          return await message.reply("contoh = `/request spill photo mantan kamu`")
     mmk = message.command[1:]
     kontol = " ".join(mmk)
-    await kontol.copy(LOG_CHAT)
+    await bot.send_message(LOG_CHAT, kontol)
     await message.reply("Terimakasih telah berkontribusi untuk kami")
     
     
