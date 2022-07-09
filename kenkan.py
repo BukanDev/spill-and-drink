@@ -15,7 +15,6 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from random import choice
-from requests import get
 from dotenv import load_dotenv
 
 load_dotenv(".env")
@@ -34,10 +33,58 @@ bot = Client("kontolbot",
             
 print("Bot sudah siap di gunakan")
 # spill text
-spill = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/spill.json").json()
+spill = [
+ "Spill makanan yang belum pernah lu makan sama sekali",
+ "spill yang paling ngeselin",
+ "Spill lagu indo fav",
+ "Spill orang yang bikin kamu terkesima setiap saat",
+ "Spill mantan cp kamu",
+ "spill rc telegram",
+ "spill kelakukan paling memalukan pas masih kecil",
+ "Spil Adek kelas yg ganteng",
+ "spill kenapa kamu selalu ngedahuluin orang lain daripada diri kamu sendiri?",
+ "spill kejadian memalukan",
+ "siapa yg sering ngajak gelud?",
+ "Spill pengalaman terhoror",
+ "spill kang ghosting",
+ "spill nama org org tersayang",
+ "Spill orang yang pernah bully lu!",
+ "spill chat terakhir kali sama mantan",
+ "Pengalaman teraneh",
+ "spill siapa org yang paling lu benci di gc",
+ "Spill pernah jadian sama kating?",
+ "spill chat waktu lu diputusin",
+ "Spill menunggu atau menanti?",
+ "spesial song buat seseorang? spill ke gc dan tag orangnya !",
+ "Spill alamat rumah",
+ "Spill tentang mantan",
+ "spill nama panggilan klian disekolah",
+ "spill orang terjamet",
+ "Sebutin film/drama/series/anime yang jadi fav kamu",
+ "spill hal yang dikangenin dari mantan",
+ "spill warna rambut yang pengen dicoba",
+ "spill orang yg paling ditakuti buat pergi",
+ "spill tukang boong",
+ "Spill hal yang lagi lo pikirin sekarang",
+ "spill theme telegram",
+ "spill nama depan org yg lagi lu sukain sekarang",
+ "Spill yang selalu bikin kamu gemes dengan kelakuannya",
+ "spiil id tik tok lu",
+ "Sapa, orang yang paling berkesan pas kelas 6 SD??",
+ "spill orang paling dongo",
+ "spill kelakuan cp yang suka bikin cemburu",
+ "spill crush yg ga peka²"
+]
 
 # drink
-drink = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/drink.json").json()
+drink = [
+ "https://telegra.ph/file/138625bd10764fb4a095f.jpg",
+ "https://telegra.ph/file/131957d3e688441cc9b3f.jpg",
+ "https://telegra.ph/file/62a9e59207d711400868a.jpg",
+ "https://telegra.ph/file/2dfe5ebf60541e17ff2fe.jpg",
+ "https://telegra.ph/file/cf99b72ae0d5b543c465b.jpg"
+]
+
 
 
            
