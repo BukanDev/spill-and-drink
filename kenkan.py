@@ -51,7 +51,7 @@ async def help_message(client: Client, message: Message):
 
 @bot.on_message(filters.command("spill"))
 async def spill(client: Client, message: Message):
-    await message.reply(choice(spill))
+    await message.reply_text(choice(spill))
     
 @bot.on_message(filters.command("drink"))
 async def drink(client: Client, message: Message):
@@ -67,7 +67,7 @@ async def request(client: Client, message: Message):
          return await message.reply("contoh = `/request spill photo mantan kamu`")
     mmk = message.command[1:]
     kontol = " ".join(mmk)
-    await bot.send_message(LOG_CHAT, kontol)
+    await bot.send_message(LOG_CHAT, f"{message.from_user.mention}\nPesan: {kontol}")
     await message.reply("Terimakasih telah berkontribusi untuk kami")
     
     
