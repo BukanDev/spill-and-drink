@@ -33,7 +33,7 @@ bot = Client("kontolbot",
             
 print("Bot sudah siap di gunakan")
 # spill text
-SPILL = [
+SPILLS = [
  "Spill makanan yang belum pernah lu makan sama sekali",
  "spill yang paling ngeselin",
  "Spill lagu indo fav",
@@ -77,7 +77,7 @@ SPILL = [
 ]
 
 # drink
-DRINK = [
+DRINKS = [
  "https://telegra.ph/file/138625bd10764fb4a095f.jpg",
  "https://telegra.ph/file/131957d3e688441cc9b3f.jpg",
  "https://telegra.ph/file/62a9e59207d711400868a.jpg",
@@ -98,11 +98,11 @@ async def help_message(client: Client, message: Message):
 
 @bot.on_message(filters.command("spill"))
 async def spill(client: Client, message: Message):
-    await message.reply(choice(SPILL))
+    await message.reply(choice(SPILLS))
     
 @bot.on_message(filters.command("drink"))
 async def drink(client: Client, message: Message):
-    await message.reply_photo(choice(DRINK))
+    await message.reply_photo(choice(DRINKS))
 
 @bot.on_message(filters.command("donasi"))
 async def donasi(client: Client, message: Message):
