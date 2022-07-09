@@ -19,13 +19,15 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
+API_ID = int(os.environ.get("API_ID"))
+API_HASH = os.environ.get("API_HASH")
 CHANNEL = os.environ.get("CHANNEL")
 OWNER = os.environ.get("OWNER")
 LOG_CHAT = os.environ.get("LOG_CHAT")
 
 bot = Client("kontolbot",
-            api_id=6,
-            api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e",
+            api_id=API_ID,
+            api_hash=API_HASH,
             bot_token=BOT_TOKEN)
             
 print("Bot sudah siap di gunakan")

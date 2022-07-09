@@ -6,6 +6,14 @@
       "description": "Dapatkan di @BotFather",
       "required": true
     },
+    "API_ID": {
+      "description": "dapatkan di my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "dapatkan di my.telegram.org",
+      "required": true
+    },
     "LOG_CHAT": {
       "description": "Isi dengan id group logs",
       "required": true,
