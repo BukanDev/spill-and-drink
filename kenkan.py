@@ -11,12 +11,12 @@
 # limitations under the License.
 
 import os
-import sys
 from pyrogram import Client, filters
 from random import choice
 from requests import get
 from dotenv import load_dotenv
-load_dotenv()
+
+load_dotenv(".env")
 
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 API_ID = int(os.environ.get("API_ID"))
@@ -31,20 +31,20 @@ bot = Client("kontolbot",
             bot_token=BOT_TOKEN)
             
 print("Bot sudah siap di gunakan")
- 
+bot.send_message(LOG_CHAT, 'BOT TELAH AKTIF')
 # spill text
-spill = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/spill.json")
+spill = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/spill.json").json()
 
 # drink
-drink = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/drink.json")
+drink = get("https://raw.githubusercontent.com/BukanDev/spill-and-drink/master/bahan/drink.json").json()
 
 
            
-@bot.on_message(filters.command("start") & ~filters.private & ~filters.group)
+@bot.on_message(filters.command("start") & ~filters.edited)
 async def start(client, message):
     await bot.send_message(message.chat.id, f"Selamat bermain dan selamat ter spill!\n\n Jangan lupa subs @{CHANNEL} dan contact @{OWNER} untuk info lainnya.\n\nNote : khusus RL bukan RP")
     
-@bot.on_message(filters.command("help") & ~filters.private & ~filters.group)
+@bot.on_message(filters.command("help") & ~filters.edited & ~filters.group)
 async def helps(client, message):
     await bot.send_message(message.chat.id, "/spill - spill dulu\n/drink - minum dulu\n/donasi - donasi ke owner bot\n/request - request spill bikinan mu")
 
@@ -56,15 +56,15 @@ async def spill(client, message):
 async def drink(client, message):
     await message.reply_photo(choice(drink))
 
-@bot.on_message(filters.command("donasi") & ~filters.private)
+@bot.on_message(filters.command("donasi") & ~filters.edited)
 async def donasi(client, message):
     await bot.send_message(message.chat.id, f"Bagi yang punya duit penuh, atau berlebih bisa kali di transfer ke @{OWNER}")
     
 @bot.on_message(filters.command("request"))
 async def request(client, message):
-    if len(m.command) < 2:
+    if len(message.command) < 2:
          return await message.reply("contoh = `/request spill photo mantan kamu`")
-    mmk = m.command[1:]
+    mmk = message.command[1:]
     kontol = " ".join(mmk)
     await bot.copy(LOG_CHAT, message.chat.id, kontol)
     await message.reply("Terimakasih telah berkontribusi untuk kami")
