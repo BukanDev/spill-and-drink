@@ -10,4 +10,4 @@
 # https://github.com/BukanDev/spill-and-drink
 # limitations under the License.
 
-python3 kenkan.py
+worker: python3 kenkan.py
