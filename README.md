@@ -13,6 +13,16 @@ ___
 <p align="left"><a href="https://heroku.com/deploy?template=https://github.com/BukanDev/spill-and-drink"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy to Heroku" target="_blank"/></a></p>
 </details>
 
+## Deploy Vps
+
+- `git clone https://github.com/BukanDev/spill-and-drink`
+- `cd spill-and-drink`
+- `pip3 install -U -r requirements.txt`
+- `nano sample.env`
+- `cp sample.env .env`
+- `screen -S spill`
+- `python3 kenkan.py`
+
 
 ## Command
 
