@@ -73,7 +73,7 @@ spill = [
  "Sapa, orang yang paling berkesan pas kelas 6 SD??",
  "spill orang paling dongo",
  "spill kelakuan cp yang suka bikin cemburu",
- "spill crush yg ga peka²"
+ "spill crush yg ga peka²",
 ]
 
 # drink
@@ -82,7 +82,7 @@ drink = [
  "https://telegra.ph/file/131957d3e688441cc9b3f.jpg",
  "https://telegra.ph/file/62a9e59207d711400868a.jpg",
  "https://telegra.ph/file/2dfe5ebf60541e17ff2fe.jpg",
- "https://telegra.ph/file/cf99b72ae0d5b543c465b.jpg"
+ "https://telegra.ph/file/cf99b72ae0d5b543c465b.jpg",
 ]
 
 
