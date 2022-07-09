@@ -1,0 +1,25 @@
+{
+  "name": "spill-and-drink",
+  "description": "[spill-and-drink] adalah bot game telegram yang berbasis pyrogram",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Dapatkan di @BotFather",
+      "required": true
+    },
+    "LOG_CHAT": {
+      "description": "Isi dengan id group logs",
+      "required": true,
+      "value": "-100"
+    },
+    "CHANNEL": {
+      "description": "Isi dengan username channel kamu tanpa tanda @",
+      "required": true,
+      "value": "musikkuchannel"
+    },
+    "OWNER": {
+      "description": "Isi dengan username channel kamu tanpa tanda @",
+      "required": true,
+      "value": "Pysmartdl"
+    }
+  }
+}
