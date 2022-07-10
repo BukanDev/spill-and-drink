@@ -41,7 +41,7 @@ SPILLS = [
  "Spill mantan cp kamu",
  "spill rc telegram",
  "spill kelakukan paling memalukan pas masih kecil",
- "Spil Adek kelas yg ganteng",
+ "Spill Adek kelas yg ganteng",
  "spill kenapa kamu selalu ngedahuluin orang lain daripada diri kamu sendiri?",
  "spill kejadian memalukan",
  "siapa yg sering ngajak gelud?",
