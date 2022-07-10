@@ -116,9 +116,11 @@ async def request(client: Client, message: Message):
          return await message.reply("contoh = `/request spill photo mantan kamu`")
     mmk = message.command[1:]
     kontol = " ".join(mmk)
-    await bot.send_message(LOG_CHAT, f"{message.from_user.mention}\nPesan: {kontol}")
+    await bot.send_message(LOG_CHAT, f"{message.from_user.mention}\nPesan: `{kontol}`")
     await message.reply("Terimakasih telah berkontribusi untuk kami")
     
-    
+@bot.on_message(filters.command("repo"))
+async def repos(client: Client, message: Message):
+    await message.reply("[SPILL AND DRINK](https://github.com/BukanDev/spill-and-drink)\nCek aja udah bisa di deploy di heroku")
 
 bot.run()
