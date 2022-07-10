@@ -83,6 +83,8 @@ DRINKS = [
  "https://telegra.ph/file/62a9e59207d711400868a.jpg",
  "https://telegra.ph/file/2dfe5ebf60541e17ff2fe.jpg",
  "https://telegra.ph/file/cf99b72ae0d5b543c465b.jpg",
+ "https://telegra.ph/file/f375b1fd0379b51a45fec.jpg",
+ "https://telegra.ph/file/c591a9074b06a6686d41c.jpg",
 ]
 
 
